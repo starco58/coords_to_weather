@@ -14,6 +14,6 @@ class CoordsController < ApplicationController
     @temperature = parsed_data["currently"]["temperature"]
     @hourly_summary = parsed_data["hourly"]["summary"]
     @daily_summary = parsed_data["daily"]["summary"]
-    # @weekly_summary = ?
+    # @weekly_summary = parsed_data["weekly"]["summary"]
   end
 end
