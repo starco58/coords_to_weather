@@ -12,9 +12,8 @@ class CoordsController < ApplicationController
     raw_data = open(url).read
     parsed_data = JSON.parse(raw_data)
     @temperature = parsed_data["currently"]["temperature"]
-
-    # @minutely_summary = ?
-    # @hourly_summary = ?
-    # @daily_summary = ?
+    @hourly_summary = parsed_data["hourly"]["summary"]
+    @daily_summary = parsed_data["daily"]["summary"]
+    # @weekly_summary = ?
   end
 end
